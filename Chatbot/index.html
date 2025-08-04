@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chatbot FAQ</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+    <body>
+        <div class="chat-box">
+            <div class="chat-box-header">
+                <h3>Chatbot FAQ</h3>
+                <p><i class="fa fa-times"></i></p>
+            </div>
+            <div class="chat-box-body">
+                <div class="chat-box-body-receive">
+                    <p>Halo, ada yang bisa saya bantu?</p>
+                    <span>12:00</span>
+                </div>
+            </div>
+            <div class="chat-box-footer">
+                <input placeholder="Masukkan Pertanyaan" type="text" />
+                <button class="send"><i class="far fa-paper-plane"></i></button>
+            </div>            
+        </div>
+
+        <div id="userInfoModal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close-button">&times;</span>
+                <h2>Selamat Datang!</h2>
+                <p>Silakan isi data diri Anda untuk memulai chat.</p>
+                <form id="userInfoForm">
+                    <input type="text" id="userName" placeholder="Nama Anda" required>
+                    <input type="tel" id="userPhone" placeholder="Nomor Telepon" required>
+                    <button type="submit">Mulai Chat</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="chat-button"><span></span></div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
