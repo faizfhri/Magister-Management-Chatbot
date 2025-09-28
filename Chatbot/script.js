@@ -5,8 +5,8 @@ $(document).ready(function () {
     const userPhoneInput = $("#userPhone");
     const chatBox = $(".chat-box"); 
 
-    // Show user info modal and hide chat button
-    $(".chat-button").on("click", function () {
+    // Show user info modal when clicking chat trigger or chat button
+    $(".chat-button, .chat-trigger-btn").on("click", function () {
         $(".chat-button").css({ "display": "none" });
         userInfoModal.addClass("show-modal");
     });

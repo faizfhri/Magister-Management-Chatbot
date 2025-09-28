@@ -1,11 +1,186 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Chatbot FAQ</title>
+        <title>Magister Management Dashboard</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     </head>
     <body>
+        <!-- Dashboard Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Magister Management</span>
+                </div>
+                <nav class="nav-menu">
+                    <a href="#" class="nav-item active"><i class="fas fa-home"></i> Dashboard</a>
+                    <a href="#" class="nav-item"><i class="fas fa-users"></i> Students</a>
+                    <a href="#" class="nav-item"><i class="fas fa-question-circle"></i> FAQ</a>
+                    <a href="#" class="nav-item"><i class="fas fa-chart-bar"></i> Analytics</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Dashboard Main Content -->
+        <main class="dashboard-main">
+            <!-- Stats Cards -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon blue">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>234</h3>
+                            <p>Total Students</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon green">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>156</h3>
+                            <p>FAQ Responses</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon orange">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>89</h3>
+                            <p>Active Chats</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon purple">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>12</h3>
+                            <p>Programs</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dashboard Content Grid -->
+            <section class="content-section">
+                <div class="content-grid">
+                    <!-- Recent Activity -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-clock"></i> Recent Activity</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="activity-item">
+                                <div class="activity-icon blue">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p>New student registration</p>
+                                    <small>2 minutes ago</small>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon green">
+                                    <i class="fas fa-question"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p>FAQ updated: Program requirements</p>
+                                    <small>5 minutes ago</small>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon orange">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p>New chat conversation started</p>
+                                    <small>8 minutes ago</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="quick-actions">
+                                <button class="action-btn blue">
+                                    <i class="fas fa-plus"></i>
+                                    Add FAQ
+                                </button>
+                                <button class="action-btn green">
+                                    <i class="fas fa-users"></i>
+                                    View Students
+                                </button>
+                                <button class="action-btn orange">
+                                    <i class="fas fa-chart-line"></i>
+                                    Analytics
+                                </button>
+                                <button class="action-btn purple">
+                                    <i class="fas fa-cog"></i>
+                                    Settings
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chat Assistant Section -->
+            <section class="chat-assistant-section">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-robot"></i> AI Assistant</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Need help? Our AI assistant is ready to answer questions about the Magister Management program.</p>
+                        <button class="chat-trigger-btn">
+                            <i class="fas fa-comments"></i>
+                            Start Conversation
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="chat-box">
+            <div class="chat-box-header">
+                <h3>Chatbot FAQ</h3>
+                <p><i class="fa fa-times"></i></p>
+            </div>
+            <div class="chat-box-body">
+                <div class="chat-box-body-receive">
+                    <p>Halo, ada yang bisa saya bantu?</p>
+                    <span>12:00</span>
+                </div>
+            </div>
+            <div class="chat-box-footer">
+                <input placeholder="Masukkan Pertanyaan" type="text" />
+                <button class="send"><i class="far fa-paper-plane"></i></button>
+            </div>            
+        </div>
+
+        <div id="userInfoModal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close-button">&times;</span>
+                <h2>Selamat Datang!</h2>
+                <p>Silakan isi data diri Anda untuk memulai chat.</p>
+                <form id="userInfoForm">
+                    <input type="text" id="userName" placeholder="Nama Anda" required>
+                    <input type="tel" id="userPhone" placeholder="Nomor Telepon" required>
+                    <button type="submit">Mulai Chat</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Chatbot Components (kept from original) -->
         <div class="chat-box">
             <div class="chat-box-header">
                 <h3>Chatbot FAQ</h3>
@@ -37,7 +212,6 @@
         </div>
 
         <div class="chat-button"><span></span></div>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="script.js"></script>
+        <script src="script-simple.js"></script>
     </body>
 </html>
